@@ -12,5 +12,13 @@ namespace FeiraApi.Test
 
             var enc = valor.Encrypt();
         }
+
+        [TestMethod]
+        public void DEcryptTest()
+        {
+            string valor = "GWPFoughomRFYu4ojXqjrQ==";
+
+            var enc = valor.Decrypt();
+        }
     }
 }
