@@ -1,5 +1,4 @@
 ﻿using FeiraApi.Dominio;
-using FeiraApi.Dominio.Exception;
 using FeiraApi.Util.Connections;
 using MongoDB.Driver;
 using System;

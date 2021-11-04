@@ -1,9 +1,0 @@
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\bin\Debug\netstandard2.1\FeiraApi.Dominio.deps.json
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\bin\Debug\netstandard2.1\FeiraApi.Dominio.dll
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\bin\Debug\netstandard2.1\FeiraApi.Dominio.pdb
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.1\FeiraApi.Dominio.csprojAssemblyReference.cache
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.1\FeiraApi.Dominio.AssemblyInfoInputs.cache
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.1\FeiraApi.Dominio.AssemblyInfo.cs
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.1\FeiraApi.Dominio.csproj.CoreCompileInputs.cache
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.1\FeiraApi.Dominio.dll
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.1\FeiraApi.Dominio.pdb

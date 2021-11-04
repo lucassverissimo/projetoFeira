@@ -1,5 +1,4 @@
 ﻿using FeiraApi.Dominio;
-using FeiraApi.Dominio.Exception;
 using FeiraAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -68,10 +67,6 @@ namespace FeiraAPI.Controllers
                 await Task.Run(() => _listaProdutoService.Insert(listaProduto));
 
                 return Ok();
-            }
-            catch (ProdutoNotFoundException exP)
-            {
-                return StatusCode(StatusCodes.Status400BadRequest, exP.Message);
             }
             catch (Exception ex)
             {

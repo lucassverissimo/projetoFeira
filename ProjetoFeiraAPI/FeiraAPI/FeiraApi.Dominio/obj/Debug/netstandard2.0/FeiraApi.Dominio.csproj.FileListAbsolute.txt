@@ -1,4 +1,0 @@
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.0\FeiraApi.Dominio.csprojAssemblyReference.cache
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.0\FeiraApi.Dominio.AssemblyInfoInputs.cache
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.0\FeiraApi.Dominio.AssemblyInfo.cs
-D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Dominio\obj\Debug\netstandard2.0\FeiraApi.Dominio.csproj.CoreCompileInputs.cache
