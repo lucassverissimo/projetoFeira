@@ -1,0 +1,9 @@
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\bin\Debug\netstandard2.0\FeiraApi.Util.deps.json
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\bin\Debug\netstandard2.0\FeiraApi.Util.dll
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\bin\Debug\netstandard2.0\FeiraApi.Util.pdb
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\obj\Debug\netstandard2.0\FeiraApi.Util.csprojAssemblyReference.cache
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\obj\Debug\netstandard2.0\FeiraApi.Util.AssemblyInfoInputs.cache
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\obj\Debug\netstandard2.0\FeiraApi.Util.AssemblyInfo.cs
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\obj\Debug\netstandard2.0\FeiraApi.Util.csproj.CoreCompileInputs.cache
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\obj\Debug\netstandard2.0\FeiraApi.Util.dll
+D:\ProjetoFeira\projetoFeira\ProjetoFeiraAPI\FeiraAPI\FeiraApi.Util\obj\Debug\netstandard2.0\FeiraApi.Util.pdb

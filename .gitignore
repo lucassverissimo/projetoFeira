@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+ProjetoFeiraAPI/FeiraAPI/.vs/FeiraAPI/v16/.suo
+*.v2
+*.testlog
+*.manifest
+*.cache
