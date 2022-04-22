@@ -31,7 +31,7 @@ namespace FeiraAPI.Controllers
 
                 return Ok(listasProdutos);
             }
-            catch (Exception ex)
+            catch 
             {
                 //_logErroService.Insert(new LogFile { Mensagem = ex.Message, DataHora = DateTime.Now, Classe = ExtensionHelper.GetCurrentClass(), Projeto = ExtensionHelper.GetProjectName() });
                 return NotFound();
@@ -52,7 +52,7 @@ namespace FeiraAPI.Controllers
 
                 return Ok(listaProduto);
             }
-            catch (Exception ex)
+            catch
             {
                 //_logErroService.Insert(new LogFile { Mensagem = ex.Message, DataHora = DateTime.Now, Classe = ExtensionHelper.GetCurrentClass(), Projeto = ExtensionHelper.GetProjectName() });
                 return NotFound();
@@ -91,7 +91,7 @@ namespace FeiraAPI.Controllers
 
                 return Ok();
             }
-            catch (Exception ex)
+            catch
             {
                 //_logErroService.Insert(new LogFile { Mensagem = ex.Message, DataHora = DateTime.Now, Classe = ExtensionHelper.GetCurrentClass(), Projeto = ExtensionHelper.GetProjectName() });
                 return NotFound();
@@ -114,7 +114,7 @@ namespace FeiraAPI.Controllers
 
                 return Ok();
             }
-            catch (Exception ex)
+            catch
             {
                 //_logErroService.Insert(new LogFile { Mensagem = ex.Message, DataHora = DateTime.Now, Classe = ExtensionHelper.GetCurrentClass(), Projeto = ExtensionHelper.GetProjectName() });
                 return NotFound();

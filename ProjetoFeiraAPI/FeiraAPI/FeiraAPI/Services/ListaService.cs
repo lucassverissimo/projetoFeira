@@ -23,21 +23,21 @@ namespace FeiraAPI.Services
 
         public List<Lista> Get() => _lista.Find(listProd => true).ToList();
 
-        public Lista Get(string id) => _lista.Find(listProd => listProd.Id == id).FirstOrDefault();
+        public Lista Get(string id) => _lista.Find(list => list.Id == id).FirstOrDefault();
 
         public Lista Insert(Lista listaProduto)
         {
             _lista.InsertOne(listaProduto);
             return listaProduto;
         }
-        public void Update(string id, Lista listaProduto) =>
-            _lista.ReplaceOne(listProd => listProd.Id == id, listaProduto);
+        public void Update(string id, Lista lista) =>
+            _lista.ReplaceOne(listProd => listProd.Id == id, lista);
 
-        public void Remove(Lista listaProdutoIn) =>
-            _lista.DeleteOne(listProd => listProd.Id == listaProdutoIn.Id);
+        public void Remove(Lista listaIn) =>
+            _lista.DeleteOne(listProd => listProd.Id == listaIn.Id);
 
         public void Remove(string id) =>
-            _lista.DeleteOne(listProd => listProd.Id == id);
+            _lista.DeleteOne(list => list.Id == id);
     }
 }
 
