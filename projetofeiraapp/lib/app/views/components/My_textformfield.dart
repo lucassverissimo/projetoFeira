@@ -10,10 +10,10 @@ class MyTextFormField extends StatelessWidget {
                   style: TextStyle(color:new Color(0xff5454D9) ),
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: new Color(0xffD9D9D9),
+                    fillColor: new Color(0xffF1F5F4),
                     labelText: 'Pesquisar',
                     labelStyle: MaterialStateTextStyle.resolveWith((Set<MaterialState> states) {
-                                  return TextStyle(color: new Color(0xffA0A0A0), letterSpacing: 1.3);
+                                  return TextStyle(color: new Color(0xffD9D9D9), letterSpacing: 1.3);
                                 }),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
                     contentPadding: EdgeInsets.all(8.0),

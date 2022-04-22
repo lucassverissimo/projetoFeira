@@ -10,13 +10,13 @@ class LinhaListaFeira extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
+      children: [         
         Expanded(
           flex: 5,
           child: Container(
             padding: new EdgeInsets.only(right: 13.0),
             height: 80,
-            color: new Color(0xffFFFFFF), //Color.fromRGBO(136, 103, 242, 1.0),
+            color: new Color(0xffF1F5F4), //Color.fromRGBO(136, 103, 242, 1.0),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(

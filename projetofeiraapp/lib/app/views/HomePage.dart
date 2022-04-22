@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../mocks/mock_feira.dart';
 import '../models/feira_model.dart';
-import 'components/linhalistafeira.dart';
-import 'components/mytextformfield.dart';
+import 'components/Linha_lista_feira.dart';
+import 'components/My_textformfield.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -27,18 +27,21 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(            
-            children: [
-              Column(
-                children: [
-                  MyTextFormField(sufix: new Icon(Icons.search,color: new Color(0xff5454D9), size: 20,)),
-                ],
-              ),
-              for (var item in feirasLista) LinhaListaFeira(feiraModel: item,)
+        child: Column(            
+          children: [
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextFormField(sufix: new Icon(Icons.search,color: new Color(0xff5454D9), size: 20,)),
+                ),
               ],
-          ),
+            ),
+            for (var item in feirasLista) Padding(
+              padding: const EdgeInsets.only(top: 2.0),
+              child: LinhaListaFeira(feiraModel: item,),
+            )
+            ],
         ),
       ),
     );
