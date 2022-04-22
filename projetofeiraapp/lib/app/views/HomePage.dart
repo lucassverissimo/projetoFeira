@@ -27,21 +27,39 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
-        child: Column(            
+        child: Column(
           children: [
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: MyTextFormField(sufix: new Icon(Icons.search,color: new Color(0xff5454D9), size: 20,)),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 20.0, left: 15, right: 15, bottom: 5),
+              child: MyTextFormField(
+                  sufix: new Icon(
+                Icons.search,
+                color: new Color(0xff5454D9),
+                size: 20,
+              )),
             ),
-            for (var item in feirasLista) Padding(
-              padding: const EdgeInsets.only(top: 2.0),
-              child: LinhaListaFeira(feiraModel: item,),
-            )
-            ],
+            Divider(
+              thickness: 1,
+              color: new Color(0xffD9D9D9),
+            ),
+            for (var item in feirasLista)
+              Container(
+                //padding: const EdgeInsets.only(top: 2.0),
+                child: Column(
+                  children: [
+                    LinhaListaFeira(
+                      feiraModel: item,
+                    ),
+                    Divider(
+                      thickness: 1,
+                      color: new Color(0xffD9D9D9),
+                    ),
+                  ],
+                ),
+              ),
+              
+          ],
         ),
       ),
     );

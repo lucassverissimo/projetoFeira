@@ -7,6 +7,6 @@ class FeiraModel {
   late String data;
   late PerfilModel autor;
   late List<PerfilModel> participantes;
-  late List<FeiraItemModel> itens;
+  late List<FeiraItemModel> itens = <FeiraItemModel>[];
   FeiraModel();
 }

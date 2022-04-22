@@ -9,30 +9,85 @@ class LinhaListaFeira extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [         
-        Expanded(
-          flex: 5,
-          child: Container(
-            padding: new EdgeInsets.only(right: 13.0),
-            height: 80,
-            color: new Color(0xffF1F5F4), //Color.fromRGBO(136, 103, 242, 1.0),
+    return Container(
+      child: Row(
+        children: [
+          Expanded(
+            flex: 5,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                feiraModel.titulo,
-                overflow: TextOverflow.ellipsis,
-                style: new TextStyle(
-                  fontSize: 13.0,
-                  fontFamily: 'Roboto',
-                  color: new Color(0xff5454D9),
-                  fontWeight: FontWeight.bold,
-                ),
+              padding: const EdgeInsets.only(left: 5.0),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        feiraModel.titulo,
+                        //textAlign: TextAlign.left,
+                        overflow: TextOverflow.ellipsis,
+                        style: new TextStyle(
+                          fontSize: 13.0,
+                          fontFamily: 'Roboto',
+                          color: new Color(0xff5454D9),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        feiraModel.itens.length.toString() +
+                            (feiraModel.itens.length > 1 ? " Itens" : " Item"),
+                        //textAlign: TextAlign.left,
+                        overflow: TextOverflow.ellipsis,
+                        style: new TextStyle(
+                          fontSize: 13.0,
+                          fontFamily: 'Roboto',
+                          color: new Color(0xff717F7F),
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        "Criado por ",
+                        //textAlign: TextAlign.left,
+                        overflow: TextOverflow.ellipsis,
+                        style: new TextStyle(
+                          fontSize: 13.0,
+                          fontFamily: 'Roboto',
+                          color: new Color(0xff717F7F),
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                      Text(
+                        feiraModel.autor.nome,
+                        //textAlign: TextAlign.left,
+                        overflow: TextOverflow.ellipsis,
+                        style: new TextStyle(
+                          fontSize: 13.0,
+                          fontFamily: 'Roboto',
+                          color: new Color(0xff4B92F2),
+                          fontWeight: FontWeight.normal,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
