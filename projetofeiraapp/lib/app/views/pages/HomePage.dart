@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:focused_menu/focused_menu.dart';
+import 'package:focused_menu/modals.dart';
 
 import '../../mocks/FeiraMock.dart';
 import '../../models/FeiraModel.dart';
@@ -39,18 +41,50 @@ class _HomePageState extends State<HomePage> {
               color: new Color(0xffD9D9D9),
             ),
             for (var item in feirasLista)
-              Container(
-                //padding: const EdgeInsets.only(top: 2.0),
-                child: Column(
-                  children: [
-                    LinhaListaFeira(
-                      feiraModel: item,
+              FocusedMenuHolder(
+                onPressed: (){},
+                menuItems: <FocusedMenuItem>[
+                  FocusedMenuItem(title: Text('Alterar'), onPressed: (){}, trailingIcon: Icon(Icons.edit)),
+                  FocusedMenuItem(title: Text('Copiar'), onPressed: (){}, trailingIcon: Icon(Icons.copy)),                  
+                    FocusedMenuItem(
+                      title: Text(
+                        'Remover', 
+                        style: TextStyle(color: Colors.white,)
+                      ), 
+                    onPressed: (){
+                      if(item.titulo == "Casa"){
+                        // confirmar a remoção
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            // retorna um objeto do tipo Dialog
+                            return AlertaRemoverItem(item);
+                          },
+                        );
+                      }
+                    }, 
+                    trailingIcon: Icon(Icons.delete, color: Colors.white,),
+                    backgroundColor: item.titulo == "Casa" ? Colors.red : Colors.grey,
                     ),
-                    Divider(
-                      thickness: 1,
-                      color: new Color(0xffD9D9D9),
+                    
+                  
+        
+                ],
+                child: AbsorbPointer(
+                  child: Container(
+                    //padding: const EdgeInsets.only(top: 2.0),
+                    child: Column(
+                      children: [
+                        LinhaListaFeira(
+                          feiraModel: item,
+                        ),
+                        Divider(
+                          thickness: 1,
+                          color: new Color(0xffD9D9D9),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
               
@@ -68,5 +102,39 @@ class _HomePageState extends State<HomePage> {
         ])
 
     );
+  }
+
+  AlertDialog AlertaRemoverItem(FeiraModel item) {
+    return AlertDialog(
+                  title: Center(child: Text('Remover Feira')),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Container(
+                        child: Text(
+                          "Tem certeza que deseja remover a feira " + item.titulo + " ?",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: new Color(0xff8867F2),
+                          ),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          ElevatedButton(                              
+                              child: Text('Sim'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              }),
+                          ElevatedButton(
+                              child: Text('Não'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              })
+                        ])
+                    ],
+                  ),
+                );
   }
 }
