@@ -1,4 +1,4 @@
-import 'package:projetofeiraapp/app/models/feira_model.dart';
+import 'package:projetofeiraapp/app/models/FeiraModel.dart';
 
 class FeiraItemModel {
   late String descricao;

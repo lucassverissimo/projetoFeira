@@ -1,6 +1,6 @@
-import '../models/feira_item_model.dart';
-import '../models/feira_model.dart';
-import '../models/perfil_model.dart';
+import '../models/FeiraItemModel.dart';
+import '../models/FeiraModel.dart';
+import '../models/PerfilModel.dart';
 
 class MockFeira {
   static List<FeiraModel> getListaFeira() {

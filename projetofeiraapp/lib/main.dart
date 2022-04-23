@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projetofeiraapp/app/views/HomePage.dart';
+
+import 'app/views/pages/AdicionarFeiraPage.dart';
+import 'app/views/pages/HomePage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +19,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(        
         primarySwatch: Colors.deepPurple,
       ),
-      home: HomePage(),
+      initialRoute: '/',
+          routes: {
+            '/':(context) => HomePage(),
+            '/feira/novo':(context) => AdicionarFeiraPage(),
+          },
     );
   }
 }

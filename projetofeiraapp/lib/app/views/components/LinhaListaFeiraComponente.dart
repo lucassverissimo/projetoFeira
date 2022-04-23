@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../models/feira_model.dart';
+import '../../models/FeiraModel.dart';
 
 class LinhaListaFeira extends StatelessWidget {
   final FeiraModel feiraModel;
@@ -31,6 +31,21 @@ class LinhaListaFeira extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          feiraModel.data,
+                          textAlign: TextAlign.right,                        
+                          overflow: TextOverflow.ellipsis,
+                          style: new TextStyle(
+                            fontSize: 13.0,
+                            fontFamily: 'Roboto',
+                            color: new Color(0xff717F7F),
+                            fontWeight: FontWeight.normal,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      )
                     ],
                   ),
                   SizedBox(
@@ -79,7 +94,7 @@ class LinhaListaFeira extends StatelessWidget {
                           fontWeight: FontWeight.normal,
                           decoration: TextDecoration.underline,
                         ),
-                      ),
+                      ),                      
                     ],
                   ),
                 ],

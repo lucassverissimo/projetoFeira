@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import '../mocks/mock_feira.dart';
-import '../models/feira_model.dart';
-import 'components/Linha_lista_feira.dart';
-import 'components/My_textformfield.dart';
+
+import '../../mocks/FeiraMock.dart';
+import '../../models/FeiraModel.dart';
+import '../components/CustomAppBar.dart';
+import '../components/LinhaListaFeiraComponente.dart';
+import '../components/MyTextFormFieldComponente.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,15 +20,7 @@ class _HomePageState extends State<HomePage> {
     List<FeiraModel> feirasLista = MockFeira.getListaFeira();
 
     return Scaffold(
-      appBar: AppBar(
-        title: Image.asset(
-          'assets/images/logo_roxa.png',
-          width: 250,
-          height: 230,
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
+      appBar: CustomAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -60,8 +55,18 @@ class _HomePageState extends State<HomePage> {
               ),
               
           ],
-        ),
+        ),        
       ),
+
+      floatingActionButton:
+            Column(mainAxisAlignment: MainAxisAlignment.end, children: [          
+          FloatingActionButton(
+            child: Icon(Icons.add),
+            onPressed: (){Navigator.of(context).pushNamed('/feira/novo');},
+            heroTag: null,
+          )
+        ])
+
     );
   }
 }

@@ -1,6 +1,6 @@
-import 'package:projetofeiraapp/app/models/perfil_model.dart';
+import 'package:projetofeiraapp/app/models/PerfilModel.dart';
 
-import 'feira_item_model.dart';
+import 'FeiraItemModel.dart';
 
 class FeiraModel {
   late String titulo;
