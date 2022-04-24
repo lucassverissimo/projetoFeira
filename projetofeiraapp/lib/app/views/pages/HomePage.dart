@@ -42,10 +42,12 @@ class _HomePageState extends State<HomePage> {
             ),
             for (var item in feirasLista)
               FocusedMenuHolder(
+
                 onPressed: (){},
                 menuItems: <FocusedMenuItem>[
                   FocusedMenuItem(title: Text('Alterar'), onPressed: (){}, trailingIcon: Icon(Icons.edit)),
                   FocusedMenuItem(title: Text('Copiar'), onPressed: (){}, trailingIcon: Icon(Icons.copy)),                  
+                  FocusedMenuItem(title: Text('Ver perfil de ' + item.autor.nome ), onPressed: (){}, trailingIcon: Icon(Icons.person)),
                     FocusedMenuItem(
                       title: Text(
                         'Remover', 
@@ -66,28 +68,22 @@ class _HomePageState extends State<HomePage> {
                     trailingIcon: Icon(Icons.delete, color: Colors.white,),
                     backgroundColor: item.titulo == "Casa" ? Colors.red : Colors.grey,
                     ),
-                    
-                  
-        
                 ],
-                child: AbsorbPointer(
-                  child: Container(
-                    //padding: const EdgeInsets.only(top: 2.0),
-                    child: Column(
-                      children: [
-                        LinhaListaFeira(
-                          feiraModel: item,
-                        ),
-                        Divider(
-                          thickness: 1,
-                          color: new Color(0xffD9D9D9),
-                        ),
-                      ],
-                    ),
+                child: Container(
+                  //padding: const EdgeInsets.only(top: 2.0),
+                  child: Column(
+                    children: [
+                      LinhaListaFeira(
+                        feiraModel: item,
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: new Color(0xffD9D9D9),
+                      ),
+                    ],
                   ),
                 ),
               ),
-              
           ],
         ),        
       ),

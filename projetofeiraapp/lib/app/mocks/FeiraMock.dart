@@ -6,19 +6,23 @@ class MockFeira {
   static List<FeiraModel> getListaFeira() {
     List<FeiraModel> retorno = <FeiraModel>[];
     PerfilModel lucasVerissimo = new PerfilModel();
-    lucasVerissimo.nome = 'Lucas Veríssimo';
+    lucasVerissimo.nome = 'Lucas';
+    lucasVerissimo.sobrenome = 'Veríssimo';
     lucasVerissimo.avatar = 'assets/images/perfil.jpg';
 
     PerfilModel amandaDiniz = new PerfilModel();
-    amandaDiniz.nome = 'Amanda Diniz';
+    amandaDiniz.nome = 'Amanda';
+    amandaDiniz.sobrenome = 'Diniz';    
     amandaDiniz.avatar = 'assets/images/perfil.jpg';
 
     PerfilModel brunoBrito = new PerfilModel();
-    brunoBrito.nome = 'Bruno Brito';
+    brunoBrito.nome = 'Bruno';
+    brunoBrito.sobrenome = 'Brito';
     brunoBrito.avatar = 'assets/images/perfil.jpg';
 
     PerfilModel michelleSantos = new PerfilModel();
-    michelleSantos.nome = 'Michelle Santos';
+    michelleSantos.nome = 'Michelle';
+    michelleSantos.sobrenome = 'Santos';
     michelleSantos.avatar = 'assets/images/perfil.jpg';
     
     // Feira 1
