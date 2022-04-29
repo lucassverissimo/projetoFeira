@@ -5,7 +5,7 @@ import '../components/CustomAppBar.dart';
 
 class AdicionarFeiraPage extends StatefulWidget {
   
-  late FeiraModel feiraModel;
+  late FeiraModel feiraModel= new FeiraModel();
 
   AdicionarFeiraPage({Key? key, FeiraModel? feiraModel}) : super(key: key);
 
@@ -25,11 +25,9 @@ class _AdicionarFeiraPageState extends State<AdicionarFeiraPage> {
         child: Row(children: [
           Expanded(
             flex: 2,
-            child: TextField(     
-                                     
+            child: TextField(
               decoration: InputDecoration(
                 labelText: 'Título',
-                
               ),
             ),
           ),
@@ -40,12 +38,10 @@ class _AdicionarFeiraPageState extends State<AdicionarFeiraPage> {
               decoration: InputDecoration(
                 labelText: 'Data',
               ),
-            )
-          
-          )
+            ),
+          ),
         ]),
       ),
     );
   }
 }
-

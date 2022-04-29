@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'app/views/pages/AdicionarFeiraPage.dart';
 import 'app/views/pages/HomePage.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(        
         primarySwatch: Colors.deepPurple,
       ),
+
       initialRoute: '/',
           routes: {
             '/':(context) => HomePage(),
