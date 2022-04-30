@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'app/views/pages/AdicionarFeiraPage.dart';
 import 'app/views/pages/HomePage.dart';
@@ -26,6 +26,12 @@ class MyApp extends StatelessWidget {
             '/':(context) => HomePage(),
             '/feira/novo':(context) => AdicionarFeiraPage(),
           },
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('pt'),
+      ],
     );
   }
 }
