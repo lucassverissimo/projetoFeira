@@ -110,7 +110,7 @@ class _LinhaListaFeiraState extends State<LinhaListaFeira> {
                           ),
                         ),
                         Text(
-                          widget.feiraModel.autor.NomeCompleto(),
+                          widget.feiraModel.autor.nomeCompleto(),
                           //textAlign: TextAlign.left,
                           overflow: TextOverflow.ellipsis,
                           style: new TextStyle(

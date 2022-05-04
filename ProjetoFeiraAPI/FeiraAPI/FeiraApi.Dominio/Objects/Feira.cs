@@ -7,17 +7,20 @@ using System.Text;
 
 namespace FeiraApi.Dominio
 {
-    public class Lista
+    public class Feira
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         [JsonIgnore]
         public string Id { get; set; }
-        public string Descricao { get; set; }
+        public string Titulo { get; set; }
+        public Perfil Autor { get; set; }
         [JsonIgnore]
-        public List<ProdutoLista> Produtos { get; set; }
+        public List<ProdutoFeira> Itens { get; set; }
         public DateTime Data { get; set; }
         [JsonIgnore]
         public string Local { get; set; }
+        [JsonIgnore]
+        public List<Perfil> participantes { get; set; }
     }
 }

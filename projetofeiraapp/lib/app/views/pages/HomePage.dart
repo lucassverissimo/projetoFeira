@@ -17,9 +17,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<FeiraModel> feirasLista = MockFeira.getListaFeira();
   @override
   Widget build(BuildContext context) {
-    List<FeiraModel> feirasLista = MockFeira.getListaFeira();
 
     return Scaffold(
       appBar: CustomAppBar(),

@@ -11,21 +11,21 @@ namespace FeiraAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ListaController : ControllerBase
+    public class FeiraController : ControllerBase
     {
-        private readonly ListaService _listaProdutoService;   
+        private readonly FeiraService _listaProdutoService;   
 
-        public ListaController(ListaService listaProdutoService)
+        public FeiraController(FeiraService listaProdutoService)
         {
             _listaProdutoService = listaProdutoService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Lista>>> GetListaProdutos()
+        public async Task<ActionResult<IEnumerable<Feira>>> GetListaProdutos()
         {
             try
             {
-                List<Lista> listasProdutos = new List<Lista>();
+                List<Feira> listasProdutos = new List<Feira>();
 
                 await Task.Run(() => listasProdutos = _listaProdutoService.Get());
 
@@ -39,11 +39,11 @@ namespace FeiraAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Lista>> GetListaProduto(string id)
+        public async Task<ActionResult<Feira>> GetListaProduto(string id)
         {
             try
             {
-                Lista listaProduto = null;
+                Feira listaProduto = null;
 
                 await Task.Run(() => listaProduto = _listaProdutoService.Get(id));
 
@@ -60,7 +60,7 @@ namespace FeiraAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Lista listaProduto)
+        public async Task<IActionResult> Post([FromBody] Feira listaProduto)
         {
             try
             {
@@ -76,11 +76,11 @@ namespace FeiraAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(string id, [FromBody] Lista listaProdutoIn)
+        public async Task<IActionResult> Put(string id, [FromBody] Feira listaProdutoIn)
         {
             try
             {
-                Lista listaProduto = null;
+                Feira listaProduto = null;
 
                 await Task.Run(() => listaProduto = _listaProdutoService.Get(id));
 
@@ -103,7 +103,7 @@ namespace FeiraAPI.Controllers
         {
             try
             {
-                Lista listaProduto = null;
+                Feira listaProduto = null;
 
                 await Task.Run(() => _listaProdutoService.Get(id));
 

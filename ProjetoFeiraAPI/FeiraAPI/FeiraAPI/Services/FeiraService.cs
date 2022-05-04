@@ -8,32 +8,32 @@ using System.Threading.Tasks;
 
 namespace FeiraAPI.Services
 {
-    public class ListaService
+    public class FeiraService
     {
-        private readonly IMongoCollection<Lista> _lista;
+        private readonly IMongoCollection<Feira> _lista;
         
 
-        public ListaService(IFeiraApiStoreDatabaseSettings settings)
+        public FeiraService(IFeiraApiStoreDatabaseSettings settings)
         {
             var client = new MongoClient(ConnectionDB.GetConnectionString(settings.ConnectionString, settings.UserDatabase, settings.PasswordDatabase));
             var database = client.GetDatabase(settings.DatabaseName);
 
-            _lista = database.GetCollection<Lista>("Lista");
+            _lista = database.GetCollection<Feira>("Feira");
         }
 
-        public List<Lista> Get() => _lista.Find(listProd => true).ToList();
+        public List<Feira> Get() => _lista.Find(listProd => true).ToList();
 
-        public Lista Get(string id) => _lista.Find(list => list.Id == id).FirstOrDefault();
+        public Feira Get(string id) => _lista.Find(list => list.Id == id).FirstOrDefault();
 
-        public Lista Insert(Lista listaProduto)
+        public Feira Insert(Feira listaProduto)
         {
             _lista.InsertOne(listaProduto);
             return listaProduto;
         }
-        public void Update(string id, Lista lista) =>
+        public void Update(string id, Feira lista) =>
             _lista.ReplaceOne(listProd => listProd.Id == id, lista);
 
-        public void Remove(Lista listaIn) =>
+        public void Remove(Feira listaIn) =>
             _lista.DeleteOne(listProd => listProd.Id == listaIn.Id);
 
         public void Remove(string id) =>

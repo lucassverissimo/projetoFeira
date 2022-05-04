@@ -4,13 +4,15 @@ using Newtonsoft.Json;
 
 namespace FeiraApi.Dominio
 {
-    public class ProdutoLista
+    public class ProdutoFeira
     {
         public Produto Produto { get; set; }
         public int quantidade { get; set; }
         [JsonIgnore]
-        public UnidadeMedidaEnum unidadeMedida { get; set; } = UnidadeMedidaEnum.UND;
+        public string unidadeMedida { get; set; }
         [JsonIgnore]
         public double valor { get; set; }
+        [JsonIgnore]
+        public string Imagem { get; set; }
     }
 }

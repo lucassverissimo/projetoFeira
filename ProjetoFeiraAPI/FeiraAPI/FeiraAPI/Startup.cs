@@ -26,7 +26,8 @@ namespace FeiraAPI {
             services.AddSingleton<IFeiraApiStoreDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<FeiraApiStoreDatabaseSettings>>().Value);
 
-            services.AddSingleton<ListaService>();            
+            services.AddSingleton<FeiraService>();
+            services.AddSingleton<PerfilService>();
 
             services.AddControllers();
 

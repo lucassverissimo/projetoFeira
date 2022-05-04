@@ -13,21 +13,21 @@ namespace FeiraAPI.Controllers
     [ApiController]
     public class FeiraApiController : ControllerBase
     {
-        private readonly ListaService _listaService;
+        private readonly FeiraService _feiraService;
 
-        public FeiraApiController(ListaService listaService)
+        public FeiraApiController(FeiraService feiraService)
         {
-            _listaService = listaService;
+            _feiraService = feiraService;
         }
 
         [HttpPut("AdicionarProduto/{idLista}")]
-        public async Task<IActionResult> AdicionarProduto(string idLista, [FromBody] ProdutoLista produtoLista)
+        public async Task<IActionResult> AdicionarProduto(string idLista, [FromBody] ProdutoFeira produtoLista)
         {
-            Lista lista = await Task.Run(() => _listaService.Get(idLista));
+            Feira lista = await Task.Run(() => _feiraService.Get(idLista));
             if (lista != null)
             {
-                lista.Produtos.Add(produtoLista);
-                _listaService.Update(lista.Id, lista);
+                lista.Itens.Add(produtoLista);
+                _feiraService.Update(lista.Id, lista);
             }
             else
             {
